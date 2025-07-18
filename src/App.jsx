@@ -1,8 +1,10 @@
-function App() {
+import Login from "./Login"
+
+function App(props) {
 
   return (
     <>
-      <h1>hey</h1>
+      <Login value={props}/>
     </>
   )
 }
