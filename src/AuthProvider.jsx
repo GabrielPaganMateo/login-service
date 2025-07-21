@@ -2,7 +2,7 @@ import { useState } from "react";
 import AuthContext from "./AuthContext";
 
 function AuthProvider(props) {
-    const [auth, setAuth] = useState({token : ''});
+    const [auth, setAuth] = useState();
     
     return (
         <AuthContext.Provider value={{auth, setAuth}}>
