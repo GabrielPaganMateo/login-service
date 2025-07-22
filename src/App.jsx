@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import Login from "./Login"
 import AuthContext from "./AuthContext"
-import User from "./User"
+import Profile from "./Profile"
 import ErrorEnum from "./ErrorEnum"
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      {isAuthenticated ? <User/> : <Login/>}
+      {isAuthenticated ? <Profile/> : <Login/>}
     </>
   )
 }

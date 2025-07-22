@@ -6,17 +6,12 @@ import ErrorEnum from "./ErrorEnum";
 function Login() {
     const [user, setUser] = useState({ username : "", password : ""});
     const {auth, setAuth} = useContext(AuthContext)
-    console.log(auth)
     const handleLoginInput = (event) => {
         setUser({...user, [event.target.name]:event.target.value})
     }
 
     function handleLoginResponse(response) {
-        if (response.accessToken !== undefined) {
-            setAuth(response.accessToken);
-        } else {
-            setAuth(response);
-        }
+        response.accessToken !== undefined ? setAuth(response.accessToken) : setAuth(response);
     }
 
     const handleLoginSubmit = (event) => {
